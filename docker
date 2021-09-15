@@ -1,10 +1,6 @@
 Microsoft Windows [Version 10.0.19043.1165]
 (c) Microsoft Corporation. All rights reserved.
 
-C:\Users\dell>docker command
-docker: 'command' is not a docker command.
-See 'docker --help'
-
 C:\Users\Pooja>docker
 
 Usage:  docker [OPTIONS] COMMAND
@@ -13,7 +9,7 @@ A self-sufficient runtime for containers
 
 Options:
       --config string      Location of client config files (default
-                           "C:\\Users\\dell\\.docker")
+                           "C:\\Users\\Pooja\\.docker")
   -c, --context string     Name of the context to use to connect to the
                            daemon (overrides DOCKER_HOST env var and
                            default context set with "docker context use")
@@ -24,11 +20,11 @@ Options:
                            (default "info")
       --tls                Use TLS; implied by --tlsverify
       --tlscacert string   Trust certs signed only by this CA (default
-                           "C:\\Users\\dell\\.docker\\ca.pem")
+                           "C:\\Users\\Pooja\\.docker\\ca.pem")
       --tlscert string     Path to TLS certificate file (default
-                           "C:\\Users\\dell\\.docker\\cert.pem")
+                           "C:\\Users\\Pooja\\.docker\\cert.pem")
       --tlskey string      Path to TLS key file (default
-                           "C:\\Users\\dell\\.docker\\key.pem")
+                           "C:\\Users\\Pooja\\.docker\\key.pem")
       --tlsverify          Use TLS and verify the remote
   -v, --version            Print version information and quit
 
@@ -99,43 +95,40 @@ Run 'docker COMMAND --help' for more information on a command.
 
 To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
 
-C:\Users\Pooja>docker pull nginx:1.75.5
-Error response from daemon: manifest for nginx:1.75.5 not found: manifest unknown: manifest unknown
-
 C:\Users\Pooja>docker pull nginx:1.17.5
 1.17.5: Pulling from library/nginx
-8d691f585fa8: Pull complete
-5b07f4e08ad0: Pull complete
-abc291867bca: Pull complete
 Digest: sha256:922c815aa4df050d4df476e92daed4231f466acc8ee90e0e774951b0fd7195a4
-Status: Downloaded newer image for nginx:1.17.5
+Status: Image is up to date for nginx:1.17.5
 docker.io/library/nginx:1.17.5
 
 C:\Users\Pooja>docker image ls
 REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
+alpine/git   latest    b8f176fa3f0d   3 months ago    25.1MB
 nginx        1.17.5    540a289bab6c   23 months ago   126MB
 
 C:\Users\Pooja>docker run --name my-nginx -d -p 8085:80 -v d:\docker-learn\html:/usr/share/nginx/html nginx:1.17.5
-1bc1c52bbc3faff49c61c20f6a8741fc0d6fbb0546f40ea556c633781af6b2fb
+7357e6697c7344810bfe09ac86a813e00d94ffb6ef1518215f0167b5509c1796
 
-C:\Users\dell>docker container ls
+C:\Users\Pooja>docker container ls
 CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS         PORTS                                   NAMES
-1bc1c52bbc3f   nginx:1.17.5   "nginx -g 'daemon of…"   2 minutes ago   Up 2 minutes   0.0.0.0:8085->80/tcp, :::8085->80/tcp   my-nginx
+7357e6697c73   nginx:1.17.5   "nginx -g 'daemon of…"   9 seconds ago   Up 6 seconds   0.0.0.0:8085->80/tcp, :::8085->80/tcp   my-nginx
 
-C:\Users\dell>docker stop my-nginx
+C:\Users\Pooja>docker stop my-nginx
 my-nginx
 
-C:\Users\dell>docker container ls
+C:\Users\Pooja>
+
+C:\Users\Pooja>docker container ls
 CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
 
-C:\Users\dell>docker container ls -a
-CONTAINER ID   IMAGE          COMMAND                  CREATED         STATUS                      PORTS     NAMES
-1bc1c52bbc3f   nginx:1.17.5   "nginx -g 'daemon of…"   3 minutes ago   Exited (0) 28 seconds ago             my-nginx
+C:\Users\Pooja>docker container ls -a
+CONTAINER ID   IMAGE          COMMAND                  CREATED          STATUS                      PORTS     NAMES
+7357e6697c73   nginx:1.17.5   "nginx -g 'daemon of…"   41 seconds ago   Exited (0) 18 seconds ago             my-nginx
 
-C:\Users\dell>docker start my-nginx
+C:\Users\Pooja>docker start my-nginx
 my-nginx
 
-C:\Users\dell>docker build
+C:\Users\Pooja>docker build
 "docker build" requires exactly 1 argument.
 See 'docker build --help'.
 
@@ -143,4 +136,4 @@ Usage:  docker build [OPTIONS] PATH | URL | -
 
 Build an image from a Dockerfile
 
-C:\Users\dell>
+C:\Users\Pooja>
