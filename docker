@@ -5,7 +5,7 @@ C:\Users\dell>docker command
 docker: 'command' is not a docker command.
 See 'docker --help'
 
-C:\Users\dell>docker
+C:\Users\Pooja>docker
 
 Usage:  docker [OPTIONS] COMMAND
 
@@ -99,10 +99,10 @@ Run 'docker COMMAND --help' for more information on a command.
 
 To get more help with docker, check out our guides at https://docs.docker.com/go/guides/
 
-C:\Users\dell>docker pull nginx:1.75.5
+C:\Users\Pooja>docker pull nginx:1.75.5
 Error response from daemon: manifest for nginx:1.75.5 not found: manifest unknown: manifest unknown
 
-C:\Users\dell>docker pull nginx:1.17.5
+C:\Users\Pooja>docker pull nginx:1.17.5
 1.17.5: Pulling from library/nginx
 8d691f585fa8: Pull complete
 5b07f4e08ad0: Pull complete
@@ -111,11 +111,11 @@ Digest: sha256:922c815aa4df050d4df476e92daed4231f466acc8ee90e0e774951b0fd7195a4
 Status: Downloaded newer image for nginx:1.17.5
 docker.io/library/nginx:1.17.5
 
-C:\Users\dell>docker image ls
+C:\Users\Pooja>docker image ls
 REPOSITORY   TAG       IMAGE ID       CREATED         SIZE
 nginx        1.17.5    540a289bab6c   23 months ago   126MB
 
-C:\Users\dell>docker run --name my-nginx -d -p 8085:80 -v d:\docker-learn\html:/usr/share/nginx/html nginx:1.17.5
+C:\Users\Pooja>docker run --name my-nginx -d -p 8085:80 -v d:\docker-learn\html:/usr/share/nginx/html nginx:1.17.5
 1bc1c52bbc3faff49c61c20f6a8741fc0d6fbb0546f40ea556c633781af6b2fb
 
 C:\Users\dell>docker container ls
